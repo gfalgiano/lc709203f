@@ -53,7 +53,6 @@ bool LC709203FComponent::begin( void )
 {
 
   ESP_LOGCONFIG( TAG, "Starting up LC709203F sensor");
-  Wire.begin();
   setPowerMode(LC709203F_POWER_OPERATE) ;
   setTemperatureMode(LC709203F_TEMPERATURE_THERMISTOR) ;
 
@@ -72,7 +71,6 @@ bool LC709203FComponent::begin( void )
 void LC709203FComponent::setup() {
 
   ESP_LOGCONFIG( TAG, "Setting Up  LC709203F sensor");
-  Wire.begin();
   setPowerMode(LC709203F_POWER_OPERATE) ;
   setTemperatureMode(LC709203F_TEMPERATURE_THERMISTOR) ;
   setCellCapacity(LC709203F_APA_2000MAH) ;    // jbo to suit the batery I am testing with
